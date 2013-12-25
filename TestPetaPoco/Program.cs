@@ -78,6 +78,7 @@ namespace TestPetaPoco
             //var resultCustomer = db.Query<Customers>(query);
             foreach (var a in db.Query<CustomerUsers>(query))
                 Console.WriteLine("UserName:" + a.UserName + ",Email:" + a.EmailAddress + ",CreateDt:" + a.CreatedDt.ToString("yyyy-MM-dd"));
+            Console.WriteLine("It's OK.");
 
             Console.ReadKey();
         }
