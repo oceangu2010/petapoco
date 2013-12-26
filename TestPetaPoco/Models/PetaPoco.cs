@@ -502,7 +502,7 @@ namespace PetaPoco
 
 			return cmd;
 		}
-
+        
 		// Override this to log/capture exceptions
 		public virtual void OnException(Exception x)
 		{
