@@ -42,7 +42,7 @@ namespace TestPetaPoco
             //sql.Append(" and CreatedDt <= @0", "2013-10-01");
             sql.Append(" where CreatedDt between @0 ", "2012-10-11");
             sql.Append(" and  @0 ", "2013-10-01");
-            var customerUser = db.Query<CustomerUsers>(sql);
+            var customerUser = db.Query<CustomerUsers>(sql);//.SingleOrDefault<CustomerUsers>();
             foreach (var a in customerUser)
                 Console.WriteLine("LoginId:"+a.UserName+",Email:"+a.EmailAddress+",CreateDt:"+a.CreatedDt.ToString("yyyy-MM-dd"));
 
